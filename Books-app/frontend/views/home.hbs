@@ -1,0 +1,56 @@
+{{>header}}
+{{>navbar}}
+
+<section class="my-5 container">
+<table class="table table-bordered">
+<thead>
+    <tr>
+        <td>ID</td>
+        <td>Book Title</td>
+        <td>Auther</td>
+        <td>Category</td>
+        <td>pages</td>
+        <td>Actions</td>
+        <td>
+            <div class="btn-group ">
+  <button type="button" class="btn dropdown-toggle btn-dark btn-outline-success" data-bs-toggle="dropdown" aria-expanded="false">
+    Sort By
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/default">Default</a></li>
+    <li><a class="dropdown-item" href="/name">Name</a></li>
+    <li><a class="dropdown-item" href="/pages">Number of pages</a></li>
+  </ul>
+</div>
+        </td>
+    </tr>
+</thead>
+
+<tbody>
+    {{#if books}}
+    {{#each data}}
+        <tr>
+        <td>{{id}}</td>
+        <td>{{bookTitle}}</td>
+        <td>{{auther}}</td>
+        <td>{{category}}</td>
+        <td>{{pagesNum}}</td>
+        <td><a class="btn btn-dark btn-outline-info mx-2" href="/edit/{{id}}">Edit</a>
+        <a class="btn btn-dark btn-outline-danger mx-2" href="/delete/{{id}}">Delete</a>
+    </tr>
+    {{/each}}
+    {{else}}
+            <tr class="alert alert-danger">
+                <td colspan="7" class="text-center">No data to show</td>
+            </tr>
+            {{/if}}
+</tbody>
+
+
+
+</table>
+
+</section>
+
+
+{{>footer}}
