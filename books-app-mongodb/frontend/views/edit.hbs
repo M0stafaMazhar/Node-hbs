@@ -1,0 +1,15 @@
+{{>header}}
+{{>navbar}}
+
+<section class="my-5 container">
+<form action="/edit/{{id}}" method="post" class="d-flex flex-column">
+
+<input name="bookTitle" placeholder="Book Title" required>
+<input name="auther" placeholder="Auther Name" required>
+<input name="category" placeholder="Category" required>
+<input name="pagesNum" type="number" placeholder="Pages" required>
+<button class="btn btn-dark btn-outline-success mx-20">Update Book</button>
+</form>
+</section>
+
+{{>footer}}
