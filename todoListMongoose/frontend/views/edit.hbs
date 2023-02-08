@@ -1,0 +1,9 @@
+{{>header}}
+{{>navbar}}
+<form action="/update/{{id}}" method="post">
+    <input name="title" placeholder="New Title">
+    <input name="content" placeholder="New Content">
+    <input type="date" name="dueDate" placeholder="New Due Date">
+    
+    <button>Update Task</button>
+</form>
